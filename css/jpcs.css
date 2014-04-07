@@ -1,0 +1,128 @@
+html {
+	/*border: 4px solid #232323;*/
+	background-image: url('/img/ray-bans.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+html, body {
+	background-color: #EEE;
+
+}
+body {
+	width: 984px;
+	height: 742px;
+	margin: 0 auto;
+	margin-top: 80px;
+	font-family: "proxima-nova",'Open Sans', sans-serif;
+	margin-bottom: 80px;
+	/*padding-bottom: 2px;*/
+	padding-top: 2px;
+	background: none;
+}
+.jpcs-social.large {
+	width: 78px;
+	margin-left: 2px;
+	margin-right: -2px;
+	text-decoration: 0;
+	/*font-size: -2em;*/
+}
+.jpcs-social:hover {
+		background-color: #EEE !important;
+}
+
+
+
+.front h1 {
+	padding-top: 400px;
+	padding-right: 40px;
+	font-size: 100px;
+	font-weight: 200;
+	color: white;
+	text-align: right;
+	opacity: 0;
+}
+
+.back p {
+	padding-left: 90px;
+	padding-right: 90px;
+}
+
+.back h2  {
+	padding-left: 90px;
+	text-align: left;
+	color: #232323;
+	font-weight: 200;
+	font-size: 60px;
+	padding-top: 100px;
+}
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+	-webkit-perspective: 1000;
+}
+/* flip the pane when hovered */
+.flip-container.hover .flipper {
+	transform: rotateX(180deg);
+	-webkit-transform: rotateX(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 980px;
+	height: 654px;
+
+	margin-bottom: 4px;
+	/*border: 1px solid black;*/
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	margin-left: 2px;
+	margin-right: 2px;
+	backface-visibilty: hidden;
+	-webkit-backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	left: 0px;
+	background-image: url("/img/me.jpg");
+	background-position: center;
+	background-size: contain;
+
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateX(180deg);
+	-webkit-transform: rotateX(180deg);
+	background-color: white;
+}
+
+.flip-container {
+	position: relative;
+}
+
+
+.flip-container .flipper {
+	transform-origin: 100% 327px; /* half of height */
+	-webkit-transform-origin: 100% 327px;
+}
