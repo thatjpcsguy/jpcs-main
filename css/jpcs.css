@@ -21,6 +21,7 @@ body {
 .about-container p {
 	font-weight: lighter;
 	color: white;
+	line-height: 1.8em;
 }
 
 .img-container {
@@ -36,6 +37,8 @@ body {
 
 .social-container {
 	float: right; 
+	color: rgba(1, 1, 1, 0);
+	text-decoration: none !important;
 }
 
 .logo-container {
@@ -61,4 +64,8 @@ body {
 
 .jpcs-social.email {
 	background-color: rgb(144, 215, 245); 
+}
+
+a {
+	color: white;
 }
