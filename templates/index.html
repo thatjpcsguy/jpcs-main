@@ -1,0 +1,35 @@
+<title>James Cooper-Stanbury</title>
+
+<link rel="stylesheet" type="text/css" href="/static/css/jpcs-social.css">
+<link rel="stylesheet" type="text/css" href="/static/css/jpcs.css">
+
+<img class="me" src="/static/img/jpcs.jpg" />
+        
+<div class="social-container">
+    <a href="http://twitter.com/thatjpcsguy/">
+        <div class="jpcs-social large twitter"></div>
+    </a>
+    <a href="http://instagram.com/_jpcs_/">
+        <div class="jpcs-social large instagram"></div>
+    </a>
+    <a href="http://github.com/thatjpcsguy">
+        <div class="jpcs-social large github"></div>
+    </a>
+    <a href="mailto:james@cooperstanbury.com">
+        <div class="jpcs-social large email"></div>
+    </a>
+</div>
+
+<img class="logo" src="/static/img/jpcs-white.png" />
+
+<p class="about">Hello, I'm James, a Photographer from Sydney, Australia. Feel free to check out my images and feel free to get in contact if you like them, Cheers.</p>
+
+
+<div class="photos">
+    {% for image in data %}
+    <div class="image">
+        <a href="{{image['link']}}"><img src="{{image['url']}}" /><p class="caption">{{image['caption']}}</p></a>
+    </div>
+    {% endfor %}
+</div>
+
