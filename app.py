@@ -4,6 +4,7 @@ import requests
 import pickle
 import datetime
 from os.path import isfile
+import logging
 
 app = Flask(__name__)
 
@@ -43,4 +44,5 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(port=8123, debug=False, host="0.0.0.0")
+#    logging.basicConfig(filename='/home/james/jpcs-main/app.log', level=logging.DEBUG)
+    app.run(port=8123, debug=True, host="0.0.0.0")
