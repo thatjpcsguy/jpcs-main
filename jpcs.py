@@ -19,14 +19,14 @@ user_id = 1901568934
 @app.route("/")
 def index():
 
-    filename = 'cached/' + str(datetime.date.today()) + '.instagram'
+    filename = '/home/james/jpcs-main/cached/' + str(datetime.date.today()) + '.instagram'
     if isfile(filename):
         with open(filename, 'rb') as f:
             out = pickle.load(f)
 
     else:
         endpoint = 'https://api.instagram.com/v1/users/%s/media/recent/?access_token=%s' % (user_id, access_token)
-        print endpoint
+        #print endpoint
         r = requests.get(endpoint)
         data = r.json()
 
